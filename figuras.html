@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <title>Figuras</title>
+</head>
+<body>
+    <header>
+        <a href="./index.html">
+            <img class="home" src="./icons/home.png" alt="">
+        </a>
+        <h1>Figuras geométricas</h1>
+       <!-- <p>Primer taller de JavaScript práctico</p> -->
+    </header>
+    <main class="card-container">
+        <section class="card-figure">
+            <img class="main-icon" src="./icons/square.png" alt="">
+            <form>
+                <input type="number" id="InputSquare" placeholder="Ingresa el valor de los lados">
+                <button type="button" onClick="calcPerimSquare()">Perímetro</button>
+                <button type="button" onClick="calcAreaSquare()">Área</button>
+            </form> 
+            <section class="s-discounts">
+                <label class="total" for="InputValue">Resultado: </label>
+                <p id="FinalValue"></p>  
+            </section>
+        </section>
+        <section class="card-figure">
+            <img class="main-icon" src="./icons/triangle.png" alt="">
+            <form>
+                <input placeholder="lado A" type="number" id="InputTriangle">
+                <input placeholder="lado B" type="number" id="InputTriangle2">
+                <input placeholder="base" type="number" id="InputTriangleBase">
+                <button type="button" onClick="calcPerimTriangle()">Perímetro</button>
+                <input placeholder="altura" type="number" id="InputTriangleHeight" onchange="disableArea()">
+                <button disabled type="button" id="getArea" onClick="calcAreaTriangle()">Área</button>
+                <!--<button type="button" onClick="calcIsoTriangle()">Altura de triángulo isósceles</button>-->
+            </form>
+            <section class="s-discounts">
+                <label class="total" for="InputValueT">Resultado: </label>
+                <p id="FinalValueT"></p>  
+            </section>
+        </section>
+        <section class="card-figure">
+            <img class="main-icon" src="./icons/circle.png" alt="">
+            <form>
+                <input placeholder="radio" type="number" id="InputCircle">
+                <button type="button" onClick="calcPerimCircle()">Perímetro</button>
+                <button type="button" onClick="calcAreaCircle()">Área</button>
+            </form>
+            <section class="s-discounts">
+                <label class="total" for="InputValueC">Resultado: </label>
+                <p id="FinalValueC"></p>  
+            </section>
+        </section>
+    </main>
+</body>
+<script src="./figuras.js"></script>
+</html>
